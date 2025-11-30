@@ -24,6 +24,7 @@ select
     log_cost,
     ship_cost,
     quantity,
+    nb_transactions,
     round(revenue / nullif(nb_transactions, 0), 2) as average_basket
 from orders_per_day
 order by date_date desc
